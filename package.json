@@ -1,7 +1,6 @@
 {
   "name": "chatroom-1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
@@ -19,7 +18,22 @@
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
+    "wdio-mocha-framework": "^0.4.0",
+    "wdio-selenium-standalone-service": "0.0.5",
+    "webdriverio": "^4.2.5",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sikemausa/chatroom-adventures.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sikemausa/chatroom-adventures/issues"
+  },
+  "homepage": "https://github.com/sikemausa/chatroom-adventures#readme",
+  "description": ""
 }
