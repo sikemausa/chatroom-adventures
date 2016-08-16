@@ -5,11 +5,12 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
-    "test": "mocha"
+    "test": "wdio wdio.conf.js"
   },
   "author": "Casey Metz and Mike Sausa",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
