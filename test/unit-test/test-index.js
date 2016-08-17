@@ -1,12 +1,12 @@
 const assert = require('chai').assert
-const index = require('../lib/index.js');
+const index = require('../../lib/index.js');
 
 describe('our test bundle', function () {
   it('should work', function () {
     assert(true);
   });
   it('should see our index.js file', function(){
-    assert.equal(newThing, true);
+    assert.equal(index(), true);
   });
 });
 //

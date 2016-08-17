@@ -1,5 +1,4 @@
 const assert = require('assert');
-const index = require('../../lib/index.js');
 
 describe('welcome page', function(){
   it('webpage should have a title', function(){
@@ -23,7 +22,7 @@ describe('welcome page', function(){
     var input = browser.element('#input');
     input.setValue('words');
     var value = browser.isEnabled('#send');
-    enabledButton();
+
     assert.equal(value, true);
   });
 });
