@@ -56,3 +56,12 @@ describe('Send button', function (){
       assert.equal(echo.getText(), 'shortish');
   });
 });
+describe('Live character counter', function(){
+  it('should increase as characters are added', function(){
+    var counter = browser.element('#counter');
+    var input = browser.element('#input');
+    input.setValue('word');
+    var counterValue = parseInt(browser.getText('#counter'));
+    assert.equal(counterValue, 4);
+  });
+});
