@@ -56,6 +56,7 @@ describe('Send button', function (){
       assert.equal(echo.getText(), 'shortish');
   });
 });
+
 describe('Live character counter', function(){
   it('should increase as characters are added', function(){
     var counter = browser.element('#counter');
@@ -65,3 +66,36 @@ describe('Live character counter', function(){
     assert.equal(counterValue, 4);
   });
 });
+
+describe('Edittable content', function() {
+  it('should allow user to edit their messages', function(){
+    var input = browser.element('#input');
+    var messageContent = browser.element('.message-content');
+    input.setValue('Something');
+    browser.click('#send');
+    browser.click('.message-content');
+    messageContent.setValue('SomethingElse');
+    assert.equal(messageContent.getText(), 'SomethingElse');
+  });
+});
+
+describe('delete button', function(){
+  it('should exist', function(){
+    var input = browser.element('#input');
+    input.setValue('Something');
+    browser.click('#send');
+    var deleteButton = browser.element('.remove');
+    assert.equal(deleteButton.getText(), 'Un-holla');
+    });
+
+
+  it('should delete the message', function(){
+      browser.url('/');
+      var input = browser.element('#input');
+      input.setValue('Something');
+      browser.click('#send');
+      browser.click('.remove');
+      var deleteButton = browser.element('.remove');
+      assert.equal(deleteButton.isExisting(), false);
+    });
+  });
