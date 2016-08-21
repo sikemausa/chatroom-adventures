@@ -28,15 +28,16 @@ describe('Send button', function (){
     assert.equal(value, true);
   });
   // it('should be disabled when text is deleted from input', function(){
+  //   browser.url('/');
   //   var input = browser.element('#input');
   //   input.setValue('monkeybutt');
-  //   browser.clearElement('#input');
+  //   browser.click('#send');
   //     var value = browser.isEnabled('#send');
   //     assert.equal(value, false);
-  //
   //   });
 
   it('should clear input field when send button is pushed', function(){
+    browser.url('/');
     var input = browser.element('#input');
     input.setValue('shortish');
     browser.click('#send');
@@ -44,6 +45,7 @@ describe('Send button', function (){
     assert.equal(value, "");
   });
   it('should display the message when send button is pushed', function(){
+    browser.url('/');
     var input = browser.element('#input');
     input.setValue('shortish');
     // browser.click('#send');
