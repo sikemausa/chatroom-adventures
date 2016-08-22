@@ -123,6 +123,7 @@ h1 {
   display:inline;
   height: 48px;
   width:100px;
+  height: 48px;
   background: #041E42;
   font-family: 'Bangers', cursive;
   position: absolute;
@@ -144,7 +145,7 @@ h1 {
   text-align: left;
   text-align: center;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 textarea {
@@ -165,7 +166,7 @@ textarea {
     width: 95%;
     margin-right: 0px;
     margin-bottom: 10px;
-    height:1.5em;
+    height: 1.5em;
   }
 
   #bottom-space{
