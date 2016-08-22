@@ -69,6 +69,7 @@ h1 {
 
 .remove {
   display: block;
+  float:right;
   margin-top: 5px;
   background: #DD4B39;
   border-radius: 10px;
