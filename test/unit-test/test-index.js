@@ -1,6 +1,8 @@
 const assert = require('chai').assert
 const chatBox = require('../../lib/chatbox.js');
 const createMessage = require('../../lib/messages.js')
+const index = require('../../index.js')
+var $ = require('./jquery');
 
 describe('our test bundle', function () {
   it('should work', function () {
@@ -49,6 +51,8 @@ describe('our test bundle', function () {
 
     context('drawToScreen method', function(){
       it('should return an html item with a remove button if the object passed in has a sender of "me"', function(){
+      var message = createMessage('me', 'comment');
+      var element;
 
       });
       it('should return an html item with NO remove button if the object passed in has a sender OTHER THAN "me"', function(){
@@ -56,15 +60,14 @@ describe('our test bundle', function () {
       });
     });
 
-    context('drawToScreen method', function(){
-      it('should return an html item with a remove button if the object passed in has a sender of "me"', function(){
-
-      });
-    });
-
     context('findMessageById method', function(){
       it('return an object from the messages array based on its id number', function(){
-
+        it('return an object from the messages array based on its id number', function(){
+          var num;
+          chatBox.messages[0] = {id: 3};
+          var foundObject = chatBox.findMessageById(3);
+          assert.equal(foundObject.id, 3);
+        });
       });
     });
 });
