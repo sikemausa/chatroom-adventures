@@ -1,14 +1,13 @@
 const assert = require('assert');
 
 describe('welcome page', function(){
+
   it('webpage should have a title', function(){
-    // when I visit the root of your application
     browser.url('/');
-    // there should be a title on your webpage
     var title = browser.getTitle();
-    console.log(title);
     assert.equal(title, 'Holla!');
   });
+
   it('homepage should have an h1', function(){
     browser.url('/');
     var content = browser.getText('h1');
@@ -21,20 +20,13 @@ describe('Send button', function (){
     var value = browser.isEnabled('#send');
     assert.equal(value, false);
   });
+
   it('send button should be enabled when the input contains text', function(){
     var input = browser.element('#input');
     input.setValue('words');
     var value = browser.isEnabled('#send');
     assert.equal(value, true);
   });
-  // it('should be disabled when text is deleted from input', function(){
-  //   browser.url('/');
-  //   var input = browser.element('#input');
-  //   input.setValue('monkeybutt');
-  //   browser.click('#send');
-  //     var value = browser.isEnabled('#send');
-  //     assert.equal(value, false);
-  //   });
 
   it('should clear input field when send button is pushed', function(){
     browser.url('/');
@@ -44,6 +36,7 @@ describe('Send button', function (){
     var value = browser.getValue('#input');
     assert.equal(value, "");
   });
+
   it('should display the message when send button is pushed', function(){
     browser.url('/');
     var input = browser.element('#input');
@@ -52,6 +45,7 @@ describe('Send button', function (){
     var text = browser.getText('.message-content');
     assert.equal(text, 'shortish');
   });
+
   it('should display a message from echoBot, equal to the previous message, after a delay', function () {
       var echo = browser.element('.response-content');
       echo.waitForExist(5000);
@@ -60,6 +54,7 @@ describe('Send button', function (){
 });
 
 describe('Live character counter', function(){
+
   it('should increase as characters are added', function(){
     var counter = browser.element('#counter');
     var input = browser.element('#input');
@@ -70,6 +65,7 @@ describe('Live character counter', function(){
 });
 
 describe('Edittable content', function() {
+
   it('should allow user to edit their messages', function(){
     var input = browser.element('#input');
     var messageContent = browser.element('.message-content');
@@ -82,6 +78,7 @@ describe('Edittable content', function() {
 });
 
 describe('delete button', function(){
+
   it('should exist', function(){
     var input = browser.element('#input');
     input.setValue('Something');
@@ -89,7 +86,6 @@ describe('delete button', function(){
     var deleteButton = browser.element('.remove');
     assert.equal(deleteButton.getText(), 'Un-holla');
     });
-
 
   it('should delete the message', function(){
       browser.url('/');
