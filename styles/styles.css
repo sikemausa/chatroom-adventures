@@ -119,9 +119,12 @@ h1 {
 
 #send {
   display:inline;
+  height: 48px;
   width:100px;
   background: #041E42;
   font-family: 'Bangers', cursive;
+  position: absolute;
+  bottom: 13px;
 }
 
 #send:hover {
@@ -158,10 +161,23 @@ textarea {
 
   textarea {
     width: 95%;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    height:1.5em;
+  }
+
+  #bottom-space{
+    height: 130px;
   }
 
   .message {
     width: 75%;
+  }
+
+  #send {
+    position: relative;
+    bottom: 0px;
+    height: 35px;
   }
 
   .response {
