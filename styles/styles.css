@@ -127,7 +127,7 @@ h1 {
   background: #041E42;
   font-family: 'Bangers', cursive;
   position: absolute;
-  bottom: 13px;
+  bottom: 23px;
 }
 
 #send:hover {
@@ -149,6 +149,7 @@ h1 {
 }
 
 textarea {
+  resize: none;
   display: inline;
   border: none;
   border-radius: 3px;
