@@ -175,6 +175,9 @@ textarea {
 
   .message {
     width: 75%;
+    float: right;
+    margin-right: 5%;
+    margin-left: 15%;
   }
 
   #send {
@@ -185,5 +188,8 @@ textarea {
 
   .response {
     width: 75%;
+    float: left;
+    margin-left: 5%;
+    margin-right: 15%;
   }
 }
