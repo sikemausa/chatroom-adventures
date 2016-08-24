@@ -12,21 +12,6 @@ describe('our test bundle', function () {
   });
 });
 
-  // describe('createMessage', function(){
-  // 
-  //   var message = createMessage('me', 'comment');
-  //
-  //   it('should return an object with a specificed sender property', function(){
-  //     assert.equal(message.sender, 'me');
-  //   });
-  //   it('should return an object with a specificed body property', function(){
-  //     assert.equal(message.body, 'comment');
-  //   });
-  //   it('should return an object with a default id', function(){
-  //     assert.isNotNaN(message.id);
-  //   });
-  // });
-
   describe('chatBox object', function(){
     context('addMessage method', function(){
 

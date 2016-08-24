@@ -38,5 +38,8 @@
     "url": "https://github.com/sikemausa/chatroom-adventures/issues"
   },
   "homepage": "https://github.com/sikemausa/chatroom-adventures#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
 }
